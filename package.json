@@ -20,6 +20,7 @@
   },
   "homepage": "https://github.com/elviobg/palindrome-server#readme",
   "dependencies": {
+    "material-ui": "^0.20.0",
     "restify": "^6.3.4",
     "restify-errors": "^6.0.0"
   },

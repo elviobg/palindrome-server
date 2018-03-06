@@ -27,10 +27,16 @@
   to { transform: rotate(360deg); }
 }
 
-.button__container {
+.label__container {
   margin-top: 200px;
   text-align: center;
 }
+
+.button__container {
+  margin-top: 10px;
+  text-align: center;
+}
+
 .button {
   background-color:green;
   border: none;
