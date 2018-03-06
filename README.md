@@ -7,11 +7,15 @@ Hi! This project implements a server RESTful app to verify if a word is palindro
 
 Besides Node an React the following modules are required:
 
-REST Framework:  [node-restify](https://github.com/restify/node-restify)
-Error handler plugin:  [restify-errors](https://github.com/restify/errors)
-Module to keep server runnig during development: [nodemon](https://github.com/remy/nodemon)
-Module to run multiple commands concurrently during development(React App and Node server): [concurrently](https://www.npmjs.com/package/concurrently)
-React components that implement Google's Material Design. [material-ui](https://github.com/mui-org/material-ui)
+REST Framework: \[node-restify\](https://github.com/restify/node-restify)
+
+Error handler plugin: \[restify-errors\](https://github.com/restify/errors)
+
+Module to keep server runnig during development: \[nodemon\](https://github.com/remy/nodemon)
+
+Module to run multiple commands concurrently during development(React App and Node server): \[concurrently\](https://www.npmjs.com/package/concurrently)
+
+React components that implement Google's Material Design. \[material-ui\](https://github.com/mui-org/material-ui)
 
 ## How to use
 
