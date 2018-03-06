@@ -16,14 +16,8 @@ class App extends Component {
     this.setState({word: event.target.value});
   }
 
-  componentDidMount() {
-    this.callApi()
-      .then(res => this.setState({ response: res.express }))
-      .catch(err => console.log(err));
-  }
-
   setStateAnswer = function(response){
-    if (response.status !== 200) 
+    if (response.status === 200) 
       console.log(this.state.word.concat(" is a palindrome"))
     else
       console.log(this.state.word.concat(" is not a palindrome"))
@@ -32,8 +26,7 @@ class App extends Component {
   callApi = async () => {
     console.log(this.state.word)
     const response = await fetch('/palindrome/'.concat(this.state.word))
-    const json = await response.json();
-    this.setStateAnswer(json);
+    this.setStateAnswer(response);
   };
 
   render () {
