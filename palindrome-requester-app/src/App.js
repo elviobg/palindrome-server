@@ -47,7 +47,7 @@ class App extends Component {
     if (response.status === 200) 
       currentAnswer = this.state.word.concat(" is a palindrome")
     else
-      currentAnswer =  this.state.word.concat(" is not a palindrome")
+      currentAnswer =  this.state.word.concat(" is NOT a palindrome")
 
     console.log(currentAnswer)
     this.setState({answer: currentAnswer})    
@@ -84,7 +84,7 @@ class App extends Component {
           <br/>
           <RaisedButton label="submit" onClick={this.callApi} primary/>
           <Dialog
-            title="Dialog With Date Picker"
+            title="Is Palindrome?"
             actions={actions}
             modal={false}
             open={this.state.open}
