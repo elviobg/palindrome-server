@@ -45,3 +45,12 @@
   height: 40px;
   width: 200px;
 }
+
+.container {
+  margin-top: 10px;
+  text-align: center;
+}
+
+.textfield_container {
+  width: '50%'
+}
