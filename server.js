@@ -1,6 +1,6 @@
 const restify = require('restify');
 const errs = require('restify-errors');
-const palindromeHelper = require('./app/palindrome.js');
+const palindromeHelper = require('./palindrome.js');
 
 const wordNotFoundErrorMessage = "none word found"
 const notPalindromeErrorMessage = "is not palindrome"
@@ -36,6 +36,5 @@ server.get('/palindrome/:word', function (req, res, next) {
         return res.send(new errs.BadRequestError(notPalindromeErrorMessage))
 
     return res.send(encapsulatedSuccessMessage).status(200)
-
   });
   
