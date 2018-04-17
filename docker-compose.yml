@@ -1,0 +1,36 @@
+version: '3'
+services:
+  backend:    
+    build:
+      context: .
+      dockerfile: ./backend/Dockerfile
+    container_name: backend
+    working_dir: /backend
+    ports:
+      - 3000:3000
+    volumes:
+      - ./backend:/backend
+    command: bash -c "cd /backend && npm i && nodemon app/server.js"
+  tests:    
+    build:
+      context: .
+      dockerfile: ./backend/Dockerfile.test
+    container_name: tests
+    working_dir: /tests
+    volumes:
+      - ./backend:/tests
+    depends_on:
+      - backend
+  frontend:
+    build:
+      context: .
+      dockerfile: ./frontend/Dockerfile
+    container_name: frontend    
+    working_dir: /home/node
+    ports:
+      - 80:3000
+    volumes:
+      - ./frontend:/home/node
+    entrypoint: sh entrypoint.sh
+    depends_on:
+      - backend
